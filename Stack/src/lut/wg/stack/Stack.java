@@ -20,7 +20,7 @@ public class Stack extends JavaPlugin {
 	
 	@Override 
 	public void onDisable(){
-			this.logger.info("Basic disabled");
+			this.logger.info("Stack disabled");
 		}
 	@Override	
 	public void onEnable(){
