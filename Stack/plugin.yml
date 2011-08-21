@@ -1,0 +1,7 @@
+name: Stack
+main: lut.wg.stack.Stack
+version: 0.1
+description: stacks stuff i hope
+commands:
+    stack:
+          description: stack items
