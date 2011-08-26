@@ -13,24 +13,27 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import com.sk89q.worldedit.blocks.ItemType;
 
-public class Stack extends JavaPlugin {
-	public static Stack plugin;
-	public final Logger logger = Logger.getLogger("Minecraft");	
+public class Stackit extends JavaPlugin {
+public static Stackit plugin;
+private final Logger logger = Logger.getLogger("Minecraft");	
+//	public Configuration config;
+//	public int configInt;
 	
+
 	
 	@Override 
 	public void onDisable(){
-			this.logger.info("Stack disabled");
+			this.logger.info("Stackit disabled");
 		}
 	@Override	
-	public void onEnable(){
+	public void onEnable(){	
+//			config = getConfiguration();
 			PluginDescriptionFile pdfFile = this.getDescription();
 			this.logger.info( pdfFile.getName() + " Version " + pdfFile.getVersion() + "is enabled!");
 		}
 
 	public boolean onCommand(CommandSender sender, Command cmd,	String commandLabel, String[] args) {
-		if (commandLabel.equalsIgnoreCase("stack")
-				|| commandLabel.equalsIgnoreCase("Stack"))
+		if (commandLabel.equalsIgnoreCase("stackit"))
 		{
 			stack((Player) sender);
 	}
@@ -110,8 +113,8 @@ private boolean itemAllowed(ItemStack item) {
 }
 
 private boolean itemOverRide(ItemStack item) {
-	// TODO Auto-generated method stub
-	if( // Item id for stuff that is wanted to be stacked
+	// TODO Auto-generated method stub		
+	if( // Item id for stuff that is wanted to be stacked			
 			(item.getTypeId() == 297)
 		||	(item.getTypeId() == 281)
 		||	(item.getTypeId() == 320)

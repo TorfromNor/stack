@@ -1,7 +1,7 @@
-name: Stack
-main: lut.wg.stack.Stack
+name: Stackit
+main: lut.wg.stack.Stackit
 version: 0.1
 description: stacks stuff i hope
 commands:
-    stack:
+    stackit:
           description: stack items
