@@ -1,7 +1,6 @@
 package lut.wg.stack;
 
 
-import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
@@ -80,12 +79,12 @@ private final Logger logger = Logger.getLogger("Minecraft");
 	                            || (!ignoreMax && itemAllowed(item))) {
 	                        continue;
 	                    }
-
 	                    // Same type?
 	                    // Blocks store their color in the damage value
 	                    if (item2.getTypeId() == item.getTypeId() &&
-	                            (!ItemType.usesDamageValue(item.getTypeId())
-	                                    || item.getDurability() == item2.getDurability())) {
+//	                            (!ItemType.usesDamageValue(item.getTypeId())
+	                    		(!usesDamageValue(item.getTypeId())               		
+	                                    || item.getDurability() == item2.getDurability())) {                		
 	                        // This stack won't fit in the parent stack
 	                        if (item2.getAmount() > needed) {
 	                            item.setAmount(64);
@@ -118,6 +117,18 @@ private boolean itemAllowed(ItemStack item) {
 	
 	return false;
 }
+private static boolean usesDamageValue(int id) {
+    return id == 35
+        || id == 351
+        || id == 17
+        || id == 18
+        || id == 43
+        || id == 44       
+        || id == 6 ;
+    
+}
+
+
 
 private boolean itemOverRide(ItemStack item) {
 
