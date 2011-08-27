@@ -13,15 +13,13 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.util.config.Configuration;
 
-import com.sk89q.worldedit.blocks.ItemType;
-
 public class Stackit extends JavaPlugin {
 public static Stackit plugin;
 private final Logger logger = Logger.getLogger("Minecraft");	
 	public Configuration config;
 	public Map<String, Object> configInt;
 	
-
+    
 	
 	@Override 
 	public void onDisable(){
