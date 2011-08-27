@@ -1,0 +1,7 @@
+name: Stackit
+main: lut.wg.stack.Stackit
+version: 0.1
+description: stacks stuff i hope
+commands:
+    stackit:
+          description: stack items
